@@ -57,7 +57,7 @@ const numbers = [2, 2, 2];
 // const demoString = "hello world";
 // const vowels = ['a', 'e', 'i', 'o', 'u']
 // let count = 0;
-// total includes vowel characters 
+// total includes vowel characters
 // vowels.filter(v =>  {
 //     if (demoString.includes(v)) {
 //         count++
@@ -84,10 +84,23 @@ const numbers = [2, 2, 2];
 // }
 // --------------------------------------------------------------
 
-const st = 'jsIsAwesome'
-let reverseString = ''
-for (let i = st.length -1 ; i > 0; i--) {
-    console.log(st[i]);
-    reverseString += st[i]
-}
-console.log(reverseString);
+// const st = 'jsIsAwesome'
+// let reverseString = ''
+// for (let i = st.length -1 ; i > 0; i--) {
+//     console.log(st[i]);
+//     reverseString += st[i]
+// }
+// console.log(reverseString);
+
+// --------------------------------------------------------------
+// Write a JavaScript program to display the current day and time in the following format:
+// Today is Monday, the current time is 10 PM : 30m : 38s.
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const currentDate = new Date();
+console.log(
+  `Today is ${days[currentDate.getDay()]}, the current time is ${
+    currentDate.getHours() > 12
+      ? currentDate.getHours() - 12 + " PM"
+      : currentDate.getHours() + " AM"
+  } : ${currentDate.getMinutes()}m : ${currentDate.getSeconds()}s `
+);
