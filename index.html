@@ -8,8 +8,23 @@
   </head>
 
   <body>
-   
+<h1 style="text-align: center;">Guise the luck number</h1>
+<button onclick="getPromptValue()" style="text-align: center;">Play Now</button>
   </body>
 
  <script src="js.js"></script>
+ <script>
+    function getPromptValue() {
+      const randomNumber = Math.floor(Math.random() * 10)
+      console.log(randomNumber);
+
+      const value = prompt('Enter your luck number')
+
+      if (value === randomNumber) {
+        alert('Wow, your guise is correct' )
+      }else{
+        alert('Miss, Lucky number was ' + randomNumber)
+      }
+    }
+ </script>
 </html>
