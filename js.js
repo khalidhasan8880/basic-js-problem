@@ -122,25 +122,25 @@ const numbers = [2, 2, 2];
 
 // Write a code on how to calculate the number of vowels and consonants in a string?(Use Javascript only)
 
-const vowels = ["a", "e", "i", "o", "u"];
+// const vowels = ["a", "e", "i", "o", "u"];
 
-const calculateVowelsAndConstants = (string) => {
-  let vowelsCount = 0;
-  let consonantsCount = 0;
+// const calculateVowelsAndConstants = (string) => {
+//   let vowelsCount = 0;
+//   let consonantsCount = 0;
 
-  const splitString = string.split("");
-  for (const word of splitString) {
-    if (vowels.includes(word)) {
-      vowelsCount++;
-    } 
-    if(!vowels.includes(word) && word !== ' '){
-      consonantsCount++;
-    }
-  }
-  return [vowelsCount, consonantsCount];
-};
+//   const splitString = string.split("");
+//   for (const letter of splitString) {
+//     if (vowels.includes(letter)) {
+//       vowelsCount++;
+//     } 
+//     if(!vowels.includes(letter) && letter !== ' '){
+//       consonantsCount++;
+//     }
+//   }
+//   return [vowelsCount, consonantsCount];
+// };
 
-console.log(calculateVowelsAndConstants("hello khalid"));
+// console.log(calculateVowelsAndConstants("hello khalid"));
 
 
 
@@ -161,9 +161,26 @@ function isPalindrome(string) {
         return false
     }
 }
-console.log(isPalindrome('eve'));
+// console.log(isPalindrome('eve'));
 
 
+
+
+
+
+
+function multiplePalindromeCounter(sentence) {
+    let palindromeWordCount = 0;
+    const extractedWords = sentence.split(' ')
+    for (const word of extractedWords) {
+        if (isPalindrome(word)) {
+            palindromeWordCount++;
+        }
+    }
+    return palindromeWordCount
+}
+
+console.log(multiplePalindromeCounter("hello my name is khalid eve"));
 
 
 
