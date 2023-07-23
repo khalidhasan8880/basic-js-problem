@@ -95,12 +95,37 @@ const numbers = [2, 2, 2];
 // --------------------------------------------------------------
 // Write a JavaScript program to display the current day and time in the following format:
 // Today is Monday, the current time is 10 PM : 30m : 38s.
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-const currentDate = new Date();
-console.log(
-  `Today is ${days[currentDate.getDay()]}, the current time is ${
-    currentDate.getHours() > 12
-      ? currentDate.getHours() - 12 + " PM"
-      : currentDate.getHours() + " AM"
-  } : ${currentDate.getMinutes()}m : ${currentDate.getSeconds()}s `
-);
+// const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+// const currentDate = new Date();
+// console.log(
+//   `Today is ${days[currentDate.getDay()]}, the current time is ${
+//     currentDate.getHours() > 12
+//       ? currentDate.getHours() - 12 + " PM"
+//       : currentDate.getHours() + " AM"
+//   } : ${currentDate.getMinutes()}m : ${currentDate.getSeconds()}s `
+// );
+
+// --------------------------------------------------------------------
+
+// const currentDate = new Date();
+// const CurrentFullYear = currentDate.getFullYear()
+// const CurrentDay = currentDate.getDay()
+// const CurrentHour = currentDate.getHours()
+// const CurrentMin = currentDate.getMinutes()
+// const CurrentSec = currentDate.getSeconds()
+
+// const targetDate = currentDate.getFullYear(), 1,5
+// console.log(CurrentFullYear);
+// console.log();
+
+// ----------------------------------------------------------
+
+function isPalindrome(string) {
+    const reversedString = string.split("").reverse().join("");
+    if (string === reversedString) {
+        return true
+    }else{
+        return false
+    }    
+}
+console.log(isPalindrome('eve'));
