@@ -120,12 +120,63 @@ const numbers = [2, 2, 2];
 
 // ----------------------------------------------------------
 
+// Write a code on how to calculate the number of vowels and consonants in a string?(Use Javascript only)
+
+const vowels = ["a", "e", "i", "o", "u"];
+
+const calculateVowelsAndConstants = (string) => {
+  let vowelsCount = 0;
+  let consonantsCount = 0;
+
+  const splitString = string.split("");
+  for (const word of splitString) {
+    if (vowels.includes(word)) {
+      vowelsCount++;
+    } 
+    if(!vowels.includes(word) && word !== ' '){
+      consonantsCount++;
+    }
+  }
+  return [vowelsCount, consonantsCount];
+};
+
+console.log(calculateVowelsAndConstants("hello khalid"));
+
+
+
+
+
+
+
+
+
+
+
+// Write a code to calculate if the string is palindrome ? (Use javascript only)
 function isPalindrome(string) {
     const reversedString = string.split("").reverse().join("");
     if (string === reversedString) {
         return true
     }else{
         return false
-    }    
+    }
 }
 console.log(isPalindrome('eve'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------
+// Explain what a callback function is and provide a simple example?
